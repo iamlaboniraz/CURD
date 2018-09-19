@@ -4,34 +4,30 @@
 	<title></title>
 </head>
 <body>
-	<dir class="small_div">
-	<dir class="container">
-		<br>
-	<h2>Book List hello</h2>
-	<hr>
-	<from method="POST" action="{% url 'add_book' %}">
-		{%  csrf_token %}
-			<label class="form-group" for="Title">Title : </label>
-			<input class="form-control" type="text" name="Title">
-		<br>
-		<br>
+	<div class="small_div">
+		<div class="container">
+			<br>
+			<h2>Book List hello</h2>
+			<hr>
+				<form method="POST" action="{% url 'add_book' %}">
+					{%  csrf_token %}
+						<label class="form-group" for="title">Title : </label>
+						<input class="form-control" type="text" name="title">
+					<br>
+					<br>
 
-			<label class="form-group" for="Price">Price : </label>
-			<input class="form-control" type="text" name="Price">
+						<label class="form-group" for="price">Price : </label>
+						<input class="form-control" type="text" name="price">
 
-		<br>
-		<br>
+					<br>
+					<br>
 
-			<label class="form-group" for="Author">Author : </label>
-			<input class="form-control" type="text" name="Author">
+						<label class="form-group" for="author">Author : </label>
+						<input class="form-control" type="text" name="author">
 
-		<br>
-		<br>
-		<br>
-		<input class="btn btn-success" type="submit" value="Create">
-
-	</from>
-</dir>
-</dir>
+					<input class="btn btn-success" type="submit" value="Create">
+				</form>
+		</div>
+	</div>
 </body>
 </html>
